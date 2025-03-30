@@ -1,8 +1,49 @@
-body {
-    background-color: burlywood;
-    padding: 2em;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-family: monospace;
+.viewport {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: #000; /* Ensures deep black base */
+}
+
+.canvas {
+    width: 300vw;
+    height: 300vh;
+    position: relative;
+    background: radial-gradient(circle at center, #283048, #000);
+}
+
+/* Stars container */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Single invisible dot that generates the stars */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent; /* No need to be visible */
+    box-shadow: 
+        50px 100px white, 200px 150px #bbb, 300px 500px #fff, 450px 700px #ddd,
+        700px 200px #fff, 900px 600px #bbb, 1100px 400px #ddd, 1300px 800px #fff,
+        1500px 300px white, 1800px 700px #bbb, 1900px 900px #fff, 2000px 500px #ddd,
+        2500px 1000px #fff, 2800px 1200px #bbb, 3000px 1500px #fff, 3200px 1800px #ddd,
+        3500px 2000px #fff, 3800px 2500px #bbb, 4000px 2800px #ddd, 4300px 3000px #fff;
+}
+
+/* Space objects */
+.object {
+    width: 100px;
+    height: 100px;
+    position: absolute;
 }
